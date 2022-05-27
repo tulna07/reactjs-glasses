@@ -6,25 +6,25 @@ export default class GlassCard extends Component {
     this.card = React.createRef();
   }
 
-  handleClick = url => {
+  handleClick = glass => {
     this.card.current.focus();
-    this.props.changeGlass(url);
+    this.props.changeGlass(glass);
   };
 
   render() {
-    const { tabIndex, idx, imgUrl } = this.props;
+    const { glass } = this.props;
 
     return (
       <div
         className="card"
-        tabIndex={tabIndex}
+        tabIndex={glass.id}
         ref={this.card}
-        onClick={() => this.handleClick(imgUrl)}
+        onClick={() => this.handleClick(glass)}
       >
         <img
           className="card-img-top"
-          src={`img/g${idx}.jpg`}
-          alt={`glass ${idx}`}
+          src={`img/g${glass.id}.jpg`}
+          alt={`glass ${glass.id}`}
         />
       </div>
     );

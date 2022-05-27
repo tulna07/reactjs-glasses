@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import GlassCard from "./glass-card";
-import dataGlasses from "../dataGlasses.json";
 
 export default class GlassList extends Component {
   renderGlassCard() {
-    return dataGlasses.map(glass => (
+    return this.props.glassList.map(glass => (
       <div className="col-md-4" key={glass.id}>
         <GlassCard
           changeGlass={this.props.changeGlass}
-          imgUrl={glass.url}
+          glass={glass}
           tabIndex={glass.id}
           idx={glass.id}
         />

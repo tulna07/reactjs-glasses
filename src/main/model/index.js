@@ -1,15 +1,17 @@
 import React, { Component } from "react";
 import Person from "./person";
-import Glass from "./glass";
+import GlassImg from "./glass-img";
+import GlassDetail from "./glass-detail";
 
 export default class Model extends Component {
   render() {
-    const { imgUrl } = this.props;
+    const { glass } = this.props;
 
     return (
       <div className="model">
         <Person />
-        <Glass imgUrl={imgUrl} />
+        <GlassImg imgUrl={glass.url} />
+        <GlassDetail glass={glass} />
       </div>
     );
   }

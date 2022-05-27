@@ -24,3 +24,15 @@
 
   transform: translateX(-50%);
 }
+
+.glass-detail {
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  padding: 10px;
+  width: 100%;
+  bottom: 0;
+}
+
+.glass-detail__price {
+  font-size: 20px;
+}
